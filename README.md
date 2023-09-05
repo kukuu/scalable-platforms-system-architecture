@@ -146,10 +146,6 @@ Choosing which architecture is right for your project is a very complex task. Co
 
 With Monoliths, minor changes to particular parts of the application, may require a re-deployment of the whole application. Delta changes cannot be detected. Not very good for scaling and performance.
 
-- https://github.com/kukuu/system-design-architecture/blob/master/microservices-main.png
-- 
-- https://github.com/kukuu/microservices
-
 ### The Architectural Pattern
 
 Microservices architecture is a distributed system of single self-contained units and an approach to application development in which a large application is built as a suite of modular services. Each module supports a specific business goal and uses a simple, well-defined interface to communicate with other sets of services.
