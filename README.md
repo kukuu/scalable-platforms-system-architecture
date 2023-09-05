@@ -232,9 +232,6 @@ iv.   Development teams that are spread out, often across the globe
 ![image](https://github.com/kukuu/integration/assets/10147828/409b7778-21df-4a6a-baa1-3186b6cada8b)
 
 
-#### Installing SSL Certificate
-
-- https://github.com/kukuu/digitalTransformationStrategies/tree/master/certificates
 #### microservice transaction
 ![image](https://github.com/kukuu/integration/assets/10147828/cd910655-6da1-4a00-ba00-16efabc7b0a2)
 
@@ -252,6 +249,9 @@ iv.   Development teams that are spread out, often across the globe
 
 ![image](https://github.com/kukuu/integration/assets/10147828/116fd731-8f01-4c0b-9f95-ed02d7bc726c)
 
+## Installing SSL Certificate
+
+- https://github.com/kukuu/digitalTransformationStrategies/tree/master/certificates
 
 ## Software  Design Patterns
 
