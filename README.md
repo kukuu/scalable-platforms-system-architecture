@@ -78,7 +78,132 @@ v. Code (Implementation)
 
 ![image](https://github.com/kukuu/integration/assets/10147828/8921e2ac-676b-4508-be2a-f4c3d64f2c20)
 
-##  How to convert monolithic to Microservices
+
+## Layered (n-tier) architecture
+
+This approach is probably the most common because it is usually built around the database, and many applications in business naturally lend themselves to storing information in tables.
+ 
+#### MVC
+ 
+ The code is arranged so the data enters the top layer and works its way down each layer until it 
+ reaches the bottom, which is usually a database. Along the way, each layer has a specific task, 
+ like checking the data for consistency or reformatting the values to keep them consistent. 
+ It’s common for different programmers to work independently on different layers
+ 
+ Just above the database is the model layer, which often contains business logic and information 
+ about the types of data in the database. At the top is the view layer, which is often CSS, JavaScript, 
+ and HTML with dynamic embedded code. In the middle, you have the controller, which has various rules
+ and methods for transforming the data moving between the view and the model.
+ 
+ The Model-View-Controller (MVC) structure, which is the standard software development approach offered by most of the popular web frameworks, is clearly a layered architecture. 
+
+ This architecture can also contain additional open layers, like a service layer, that can be used to access shared services only in the business layer but also get bypassed for speed.
+
+
+#### Benefits
+
+The advantage of a layered architecture is the separation of concerns, which means that each layer can focus solely on its role. This makes it:
+
+i.  Maintainable
+
+ii.  Testable
+
+iii. Easy to assign separate "roles"
+
+iv.  Easy to update and enhance layers separately
+
+
+
+#### Caveats
+
+i.  Source code can turn into a “big ball of mud” if it is unorganized and the modules don’t have clear roles or relationships.
+
+ii. Code can end up slow thanks to what some developers call the “sinkhole anti-pattern.” Much of the code can be devoted to   passing data through layers without using any logic.
+
+iii. Layer isolation, which is an important goal for the architecture, can also make it hard to understand the architecture without understanding every module.
+
+iv. Coders can skip past layers to create tight coupling and produce a logical mess full of complex interdependencies.
+Monolithic deployment is often unavoidable, which means small changes can require a complete redeployment of the application.
+
+#### Best for
+
+i.   New applications that need to be built quickly
+
+ii   Enterprise or business applications that need to mirror traditional IT departments and processes
+
+iii. Teams with inexperienced developers who don’t understand other architectures yet
+
+iv.  Applications requiring strict maintainability and testability standards
+ 
+## Microservice
+
+A Microservices architecture refers to an application which is constructed from a number of independent services called Microservices.  Each microservice is a 
+self-contained module that performs a discrete group of functions and provides unique business capabilities. The individual services boosts of its own data federation unlike monoliths for  deployment. The term micro does not mean that the modules that make up the system are necessarily small, just independent. In fact, they each may have a website, web service, windows service and a database. 
+
+Communication between each of these modules is achieved via web service calls and messages on a service bus that calls to and collects the relevant data/information from each module. 
+ 
+Choosing which architecture is right for your project is a very complex task. Complexity, flexibility, size, time frames, diversity of the team, cost-effectivenes/budget and specific conditions of the project are just some of the factors that need to be considered when deciding which software architecture is the best for your project.
+
+With Monoliths, minor changes to particular parts of the application, may require a re-deployment of the whole application. Delta changes cannot be detected. Not very good for scaling and performance.
+
+- https://github.com/kukuu/system-design-architecture/blob/master/microservices-main.png
+- 
+- https://github.com/kukuu/microservices
+
+### The Architectural Pattern
+
+Microservices architecture is a distributed system of single self-contained units and an approach to application development in which a large application is built as a suite of modular services. Each module supports a specific business goal and uses a simple, well-defined interface to communicate with other sets of services.
+
+By splitting your app into small units every part of it is independently deployable and scalable, can be written by different teams and in different programming languages and can be tested individually.
+
+The micro-service  applications is capable of running in their own memory space, data federation and scale independently from each other across potentially many separate machines. 
+
+When you choose to build your application as a set of microservices, you need to decide how your application’s clients will interact with the microservices. With a monolithic application there is just one set of (typically replicated, load‑balanced) endpoints. In a microservices architecture, however, each microservice exposes a set of what are typically fine‑grained endpoints.
+
+Services must handle requests from the application’s clients. Furthermore, services must sometimes collaborate to handle those requests. They must use an inter-process communication protocol for translations and forwarding requests. Use asynchronous non-blocking messaging for inter-service communication. Services communicating by exchanging messages over messaging channels. Examples of asynchronous messaging technologies are Apache Kafka (Event Driven) and RabbitMQ (Messaging). Communication can also be established using REST.
+
+### Benefits and Motivation
+
+- Loose coupling since it decouples clients from services
+- Small individual components
+- Easy to maintain
+- Offers parallel development
+- Independent deployment
+- Rapid iteration
+- Feature additions - enrichments
+- Confidence with CI/CD
+- Improved availability since the message broker buffers messages until the consumer is able to process them. Result in asynchronous  data handling during request, response
+- Supports a variety of communication patterns including request/reply, notifications, request/async response, publish/subscribe, publish/async response etc
+- Agile compliant: The modular approach of Microservices architecture works well with an agile management style 
+as it supports the slicing and splitting up of smaller work increments and tasks which goes hand-in-hand 
+with projects using an agile methodology.
+- Reduced system downtime: Microservices provide the flexibility to change parts of the solution 
+without affecting the solution as a whole which is key in providing a reliable solution without
+
+
+### Caveats
+
+i.  The services must be largely independent or else interaction can cause the cloud to become imbalanced.
+
+ii. Not all applications have tasks that can’t be easily split into independent units.
+
+iii. Performance can suffer when tasks are spread out between different microservices. The communication costs can be significant.
+
+iv. Too many microservices can confuse users as parts of the web page appear much later than others. Anti-AJAX
+
+
+### Best for
+
+i.   Websites with small components
+
+ii.  Corporate data centers with well-defined boundaries
+
+iii. Rapidly developing new businesses and web applications
+
+iv.   Development teams that are spread out, often across the globe
+
+
+###  How to convert monolithic to Microservices
 
 ```
 
