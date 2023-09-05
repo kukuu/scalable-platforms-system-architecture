@@ -302,6 +302,13 @@ ii.  Applications where the individual data blocks interact with only a few of t
 
 iii. User interfaces
 
+## Microkernel (Plug-in) architecture - AKA COTS
+
+The microkernel architecture pattern (aka plug-in architecture pattern) is a natural pattern for implementing product-based applications. A product-based application is one that is packaged and made available for download in versions as a typical third-party product.
+
+The architecture has a core set of operations that are used again and again in different patterns that depend upon the data and the task at hand.
+
+
 ## CI/CD
 
 - ![image](https://github.com/kukuu/integration/assets/10147828/e06f4212-8d1e-4782-9a9c-2f11b8b54616)
