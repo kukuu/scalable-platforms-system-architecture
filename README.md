@@ -221,25 +221,86 @@ iv.   Development teams that are spread out, often across the globe
 
 ```
 
-## NodeJS Microservice
+### NodeJS Microservice
 
 - https://github.com/kukuu/microservices
 
 - https://github.com/kukuu/microservices/tree/master/microservice-nodejs-express
 
-  
-#### JWT transaction
-![image](https://github.com/kukuu/integration/assets/10147828/409b7778-21df-4a6a-baa1-3186b6cada8b)
 
 
-#### microservice transaction
+### microservice transaction
 ![image](https://github.com/kukuu/integration/assets/10147828/cd910655-6da1-4a00-ba00-16efabc7b0a2)
 
 
-## SPRING BOOT JAVA Microservice
+### SPRING BOOT JAVA Microservice
 
 ![image](https://github.com/kukuu/integration/assets/10147828/e48fa1d1-8fe2-4c30-8e8d-43274d263898)
 
+## Space-based architecture (Cloud)
+
+The space-based architecture is designed to avoid functional collapse under high load by splitting up both the processing and the storage between multiple servers. 
+
+The data is spread out across the nodes just like the responsibility for servicing calls. The name “space-based” refers to the “tuple space” of the users, which is cut up to partition the work between the nodes. 
+
+The space-based architecture supports things that have unpredictable spikes by eliminating the database.
+
+Examples are PaaS, SaaS, IaaS etc.
+
+###  Caveats
+
+i.  Finding an average or doing a statistical analysis—must be split up into subjobs, spread out across all of the nodes, and then aggregated when it’s done.
+
+ii.  Transactional support is more difficult with RAM databases.
+
+iii. Generating enough load to test the system can be challenging, but the individual nodes can be tested independently.
+
+iv. Developing the expertise to cache the data for speed without corrupting multiple copies is difficult.
+
+### Best for
+
+i.  High-volume data like click streams and user logs
+
+ii. Low-value data that can be lost occasionally without big consequences—in other words, not bank transactions
+Social networks.
+
+## Event-driven / Composition architecture
+
+Many programs spend most of their time waiting for something to happen. Sometimes there’s data that needs processing, and other times there isn’t. Common within network operations, and human driven.
+
+The event-driven architecture helps manage this by building a central unit that accepts all data and then delegates it to the separate modules that handle the particular type. This handoff is said to generate an “event,” and it is delegated to the code assigned to that type. Functional programming. 
+
+Programming a web page with JavaScript involves writing the small modules that react to events like mouse clicks or keystrokes. The browser itself orchestrates all of the input and makes sure that only the right code sees the right events. Many different types of events are common in the browser, but the modules interact only with the events that concern them. This is very different from the layered architecture where all data will typically pass through all layers. 
+
+### Benefits
+
+i.   Are easily adaptable to complex, often chaotic environments
+
+ii.  Scale easily
+
+iii. Are easily extendable when new event types appear
+
+
+### Caveats
+
+i.  Testing can be complex if the modules can affect each other. While individual modules can be tested independently, the interactions between them can only be tested in a fully functioning system.
+
+ii.  Error handling can be difficult to structure, especially when several modules must handle the same events.
+When modules fail, the central unit must have a backup plan.
+
+iii. Messaging overhead can slow down processing speed, especially when the central unit must buffer messages that arrive in bursts.
+
+iv.  Developing a systemwide data structure for events can be complex when the events have very different needs.
+
+v. Maintaining a transaction-based mechanism for consistency is difficult because the modules are so decoupled and independent.
+
+### Best for:
+
+i.  Asynchronous systems with asynchronous data flow
+
+ii.  Applications where the individual data blocks interact with only a few of the many modules
+
+iii. User interfaces
 
 ## CI/CD
 
@@ -249,7 +310,62 @@ iv.   Development teams that are spread out, often across the globe
 
 ![image](https://github.com/kukuu/integration/assets/10147828/116fd731-8f01-4c0b-9f95-ed02d7bc726c)
 
+##  Signing and Authenticating with JWT 
+JSON Web Token (JWT) is a compact and self-contained way to represent information between two parties in a secure manner. It is often used for authentication and data exchange in web applications. JWTs are digitally signed, ensuring their integrity and authenticity. They consist of three parts: the header, the payload, and the signature.
+
+It is a secure and compact way to transmit information between parties. It contains a header, payload, and signature, and can be created using symmetric or asymmetric encryption.
+
+
+### Features and Attributes of JWT
+
+- Compact Format: JWTs are designed to be lightweight and compact, making them suitable for use in URLs, cookies, or HTTP headers
+  
+- Self-Contained: The token contains all necessary information to identify the user and verify the authenticity of the token.
+  
+- Signature: JWTs can be signed using a secret (symmetric) or unsigned using a public/private key pair (asymmetric) to ensure data integrity.
+  
+- Data Payload: The payload of a JWT can carry user information, claims, permissions, and more.
+  
+- Easy to Share: JWTs are easy to share across different services, making them useful in microservices architecture.
+
+- Cross-Domain Communication: JWTs can be used to authenticate requests between different domains or systems.
+
+
+### Components of a JWT:
+
+- - Header: Contains metadata about the type of token and the cryptographic algorithm used for signature verification.
+
+- - Payload: Contains claims or statements about an entity (user) and additional data.
+
+- - Signature: The encoded header, payload, and a secret key (for symmetric encryption) or private key (for asymmetric encryption) are used to create the signature, which verifies the integrity of the token.
+
+### Creating and Parsing JWT:
+
+- Creation: To create a JWT, the header and payload are JSON-encoded, then concatenated with a secret key (for symmetric) or signed with a private key (for asymmetric). The result is the JWT token.
+
+- Parsing: To parse and validate a JWT, the signature is verified using the provided secret key (symmetric) or public key (asymmetric). If the signature is valid, the data within the token can be extracted and used.
+
+
+### Symmetric vs. Asymmetric Encryption:
+- Symmetric Encryption: In symmetric encryption, the same secret key is used for both encryption and decryption. It's faster but requires secure distribution of the key.
+
+- Asymmetric Encryption: Asymmetric encryption uses a pair of keys: a public key for encryption and a private key for decryption. It eliminates the need for key sharing but is slower due to the complex mathematical operations involved.
+![image](https://github.com/kukuu/integration/assets/10147828/409b7778-21df-4a6a-baa1-3186b6cada8b)
+
+
+
 ## Installing SSL Certificate
+
+- Encryption: SSL provides encryption of data transmitted between a client and a server, ensuring confidentiality.
+
+- Authentication: SSL authenticates the identity of the server using digital certificates, preventing impersonation and man-in-the-middle attacks.
+
+- Data Integrity: SSL ensures that data is not tampered with during transmission.
+
+- Trust and Security: SSL uses a certificate authority to verify the authenticity of a server's identity.
+
+- Browser Compatibility: SSL certificates are widely supported by web browsers, ensuring seamless user experiences.
+SEO Benefits: Google and other search engines give preference to HTTPS-enabled sites, improving search rankings.
 
 - https://github.com/kukuu/digitalTransformationStrategies/tree/master/certificates
 
