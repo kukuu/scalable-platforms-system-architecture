@@ -1,4 +1,4 @@
-# System Design Architecture for scalable robust digital platforms
+## System Design Architecture for scalable robust digital platforms
 
 Software architecture refers to the high level structures of a software system and the discipline of creating such structures and systems. Each structure comprises software elements, relations among them, and properties of both elements and relations.
 
