@@ -74,18 +74,21 @@ v. Code (Implementation)
 
 ```
 
-## Software Design Decision
+## Software Architecture Design Decision
 
 ![image](https://github.com/kukuu/integration/assets/10147828/24149165-3a03-4194-afd9-292f20fc3e1a)
 
 
-## Client Server Multi-tier
+
+## Software Architecture Design Patterns
+
+### Client Server Multi-tier
 
 
 ![image](https://github.com/kukuu/integration/assets/10147828/8921e2ac-676b-4508-be2a-f4c3d64f2c20)
 
 
-## Layered (n-tier) architecture
+### Layered (n-tier) architecture
 
 This approach is probably the most common because it is usually built around the database, and many applications in business naturally lend themselves to storing information in tables.
  
@@ -141,7 +144,7 @@ iii. Teams with inexperienced developers who don’t understand other architectu
 
 iv.  Applications requiring strict maintainability and testability standards
  
-## Microservice
+### Microservice
 
 A Microservices architecture refers to an application which is constructed from a number of independent services called Microservices.  Each microservice is a 
 self-contained module that performs a discrete group of functions and provides unique business capabilities. The individual services boosts of its own data federation unlike monoliths for  deployment. The term micro does not mean that the modules that make up the system are necessarily small, just independent. In fact, they each may have a website, web service, windows service and a database. 
@@ -152,7 +155,7 @@ Choosing which architecture is right for your project is a very complex task. Co
 
 With Monoliths, minor changes to particular parts of the application, may require a re-deployment of the whole application. Delta changes cannot be detected. Not very good for scaling and performance.
 
-### The Architectural Pattern
+#### The Architectural Pattern
 
 Microservices architecture is a distributed system of single self-contained units and an approach to application development in which a large application is built as a suite of modular services. Each module supports a specific business goal and uses a simple, well-defined interface to communicate with other sets of services.
 
@@ -164,7 +167,7 @@ When you choose to build your application as a set of microservices, you need to
 
 Services must handle requests from the application’s clients. Furthermore, services must sometimes collaborate to handle those requests. They must use an inter-process communication protocol for translations and forwarding requests. Use asynchronous non-blocking messaging for inter-service communication. Services communicating by exchanging messages over messaging channels. Examples of asynchronous messaging technologies are Apache Kafka (Event Driven) and RabbitMQ (Messaging). Communication can also be established using REST.
 
-### Benefits and Motivation
+#### Benefits and Motivation
 
 - Loose coupling since it decouples clients from services
 - Small individual components
@@ -183,7 +186,7 @@ with projects using an agile methodology.
 without affecting the solution as a whole which is key in providing a reliable solution without
 
 
-### Caveats
+#### Caveats
 
 i.  The services must be largely independent or else interaction can cause the cloud to become imbalanced.
 
@@ -194,7 +197,7 @@ iii. Performance can suffer when tasks are spread out between different microser
 iv. Too many microservices can confuse users as parts of the web page appear much later than others. Anti-AJAX
 
 
-### Best for
+#### Best for
 
 i.   Websites with small components
 
@@ -205,7 +208,7 @@ iii. Rapidly developing new businesses and web applications
 iv.   Development teams that are spread out, often across the globe
 
 
-###  How to convert monolithic to Microservices
+####  How to convert monolithic to Microservices
 
 ```
 
@@ -227,7 +230,7 @@ iv.   Development teams that are spread out, often across the globe
 
 ```
 
-### NodeJS Microservice
+#### NodeJS Microservice
 
 - https://github.com/kukuu/microservices
 
@@ -235,15 +238,15 @@ iv.   Development teams that are spread out, often across the globe
 
 
 
-### microservice transaction
+#### microservice transaction
 ![image](https://github.com/kukuu/integration/assets/10147828/cd910655-6da1-4a00-ba00-16efabc7b0a2)
 
 
-### SPRING BOOT JAVA Microservice
+#### SPRING BOOT JAVA Microservice
 
 ![image](https://github.com/kukuu/integration/assets/10147828/e48fa1d1-8fe2-4c30-8e8d-43274d263898)
 
-## Space-based architecture (Cloud)
+### Space-based architecture (Cloud)
 
 The space-based architecture is designed to avoid functional collapse under high load by splitting up both the processing and the storage between multiple servers. 
 
@@ -253,7 +256,7 @@ The space-based architecture supports things that have unpredictable spikes by e
 
 Examples are PaaS, SaaS, IaaS etc.
 
-###  Caveats
+####  Caveats
 
 i.  Finding an average or doing a statistical analysis—must be split up into subjobs, spread out across all of the nodes, and then aggregated when it’s done.
 
@@ -263,14 +266,14 @@ iii. Generating enough load to test the system can be challenging, but the indiv
 
 iv. Developing the expertise to cache the data for speed without corrupting multiple copies is difficult.
 
-### Best for
+#### Best for
 
 i.  High-volume data like click streams and user logs
 
 ii. Low-value data that can be lost occasionally without big consequences—in other words, not bank transactions
 Social networks.
 
-## Event-driven / Composition architecture
+### Event-driven / Composition architecture
 
 Many programs spend most of their time waiting for something to happen. Sometimes there’s data that needs processing, and other times there isn’t. Common within network operations, and human driven.
 
@@ -278,7 +281,7 @@ The event-driven architecture helps manage this by building a central unit that 
 
 Programming a web page with JavaScript involves writing the small modules that react to events like mouse clicks or keystrokes. The browser itself orchestrates all of the input and makes sure that only the right code sees the right events. Many different types of events are common in the browser, but the modules interact only with the events that concern them. This is very different from the layered architecture where all data will typically pass through all layers. 
 
-### Benefits
+#### Benefits
 
 i.   Are easily adaptable to complex, often chaotic environments
 
@@ -287,7 +290,7 @@ ii.  Scale easily
 iii. Are easily extendable when new event types appear
 
 
-### Caveats
+#### Caveats
 
 i.  Testing can be complex if the modules can affect each other. While individual modules can be tested independently, the interactions between them can only be tested in a fully functioning system.
 
@@ -300,7 +303,7 @@ iv.  Developing a systemwide data structure for events can be complex when the e
 
 v. Maintaining a transaction-based mechanism for consistency is difficult because the modules are so decoupled and independent.
 
-### Best for:
+#### Best for:
 
 i.  Asynchronous systems with asynchronous data flow
 
@@ -308,28 +311,28 @@ ii.  Applications where the individual data blocks interact with only a few of t
 
 iii. User interfaces
 
-## Microkernel (Plug-in) architecture - AKA COTS
+### Microkernel (Plug-in) architecture - AKA COTS
 
 The microkernel architecture pattern (aka plug-in architecture pattern) is a natural pattern for implementing product-based applications. A product-based application is one that is packaged and made available for download in versions as a typical third-party product.
 
 The architecture has a core set of operations that are used again and again in different patterns that depend upon the data and the task at hand.
 
 
-## CI/CD
+### CI/CD
 
 - ![image](https://github.com/kukuu/integration/assets/10147828/e06f4212-8d1e-4782-9a9c-2f11b8b54616)
 
-## Kubernetes Orchestration
+### Kubernetes Orchestration
 
 ![image](https://github.com/kukuu/integration/assets/10147828/116fd731-8f01-4c0b-9f95-ed02d7bc726c)
 
-##  Signing and Authenticating with JWT 
+###  Signing and Authenticating with JWT 
 JSON Web Token (JWT) is a compact and self-contained way to represent information between two parties in a secure manner. It is often used for authentication and data exchange in web applications. JWTs are digitally signed, ensuring their integrity and authenticity. They consist of three parts: the header, the payload, and the signature.
 
 It is a secure and compact way to transmit information between parties. It contains a header, payload, and signature, and can be created using symmetric or asymmetric encryption.
 
 
-### Features and Attributes of JWT
+#### Features and Attributes of JWT
 
 - Compact Format: JWTs are designed to be lightweight and compact, making them suitable for use in URLs, cookies, or HTTP headers
   
@@ -344,7 +347,7 @@ It is a secure and compact way to transmit information between parties. It conta
 - Cross-Domain Communication: JWTs can be used to authenticate requests between different domains or systems.
 
 
-### Components of a JWT:
+#### Components of a JWT:
 
 - - Header: Contains metadata about the type of token and the cryptographic algorithm used for signature verification.
 
@@ -352,14 +355,14 @@ It is a secure and compact way to transmit information between parties. It conta
 
 - - Signature: The encoded header, payload, and a secret key (for symmetric encryption) or private key (for asymmetric encryption) are used to create the signature, which verifies the integrity of the token.
 
-### Creating and Parsing JWT:
+#### Creating and Parsing JWT:
 
 - Creation: To create a JWT, the header and payload are JSON-encoded, then concatenated with a secret key (for symmetric) or signed with a private key (for asymmetric). The result is the JWT token.
 
 - Parsing: To parse and validate a JWT, the signature is verified using the provided secret key (symmetric) or public key (asymmetric). If the signature is valid, the data within the token can be extracted and used.
 
 
-### Symmetric vs. Asymmetric Encryption:
+#### Symmetric vs. Asymmetric Encryption:
 - Symmetric Encryption: In symmetric encryption, the same secret key is used for both encryption and decryption. It's faster but requires secure distribution of the key.
 
 - Asymmetric Encryption: Asymmetric encryption uses a pair of keys: a public key for encryption and a private key for decryption. It eliminates the need for key sharing but is slower due to the complex mathematical operations involved.
@@ -382,7 +385,7 @@ SEO Benefits: Google and other search engines give preference to HTTPS-enabled s
 
 - https://github.com/kukuu/digitalTransformationStrategies/tree/master/certificates
 
-## Software  Design Patterns
+## OOP  Design Patterns
 
 ### The Constructor Design Pattern
 
