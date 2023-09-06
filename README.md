@@ -35,7 +35,7 @@ There are many recognized architectural patterns and styles, among them:
 ```
 By combining the technologies, methodologies and practices below, you can successfully build a digital platform that will be highly scalable, reliable, and maintainable. The platform could efficiently handle growing user loads, recover from failures, and provide actionable insights through comprehensive monitoring and observability. This approach will ensure the platform's resilience and responsiveness, meets the demands of a dynamic digital landscape.
 
-- Software System Design Architecture: Start by carefully designing the architecture of the digital platform. follow established software engineering standard methodologies such as the SOLID principles, Domain-Driven Design (DDD) to ensure a maintainable and scalable system and also Security andProject Management methodolgies and guidelines like OWASP, TOGAF, Agile etc.
+- System Design Architecture: Start by carefully designing the architecture of the digital platform. follow established software engineering standard methodologies such as the SOLID principles, Domain-Driven Design (DDD) to ensure a maintainable and scalable system and also Security andProject Management methodolgies and guidelines like OWASP, TOGAF, Agile etc.
 
 - Cloud Technology: Leveraging cloud services, particularly AWS, Azure, or Google Cloud, architecting the platform for scalability and reliability. Cloud-native solutions will allow for easy scaling and disaster recovery planning.
 
