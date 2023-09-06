@@ -37,6 +37,9 @@ By combining the technologies, methodologies and practices below, you can succes
 
 - System Design Architecture: Start by carefully designing the architecture of the digital platform. follow established software engineering standard methodologies such as the SOLID principles, Domain-Driven Design (DDD) to ensure a maintainable and scalable system and also Security and Project Management methodolgies and guidelines like OWASP, TOGAF, Agile etc.
 
+  
+![image](https://github.com/kukuu/scalable-platforms-system-architecture/assets/10147828/ca5a8d17-1210-47ea-90f8-db5e310e9ea5)
+
 - Cloud Technology: Leveraging cloud services, particularly AWS, Azure, or Google Cloud, architecting the platform for scalability and reliability. Cloud-native solutions will allow for easy scaling and disaster recovery planning.
 
 - Node.js and TypeScript: Node.js was chosen as the backend runtime due to its efficiency and non-blocking I/O. TypeScript was employed to bring strong typing and improved maintainability to the codebase.
