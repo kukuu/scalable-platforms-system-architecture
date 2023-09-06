@@ -48,7 +48,7 @@ By combining the technologies, methodologies and practices below, you can succes
 
 - Integration and DevOps: Common integration tasks were streamlined by implementing CI/CD pipelines. Tools like Jenkins or GitLab CI were used to automate testing and deployments. Infrastructure as Code (IaC) with tools like Terraform or AWS CloudFormation was employed for infrastructure provisioning.
 
- https://github.com/kukuu/integration
+           https://github.com/kukuu/integration
 
 - Kubernetes: Containerization using Docker and orchestration with Kubernetes enabled easy management and scaling of microservices. Kubernetes provided features like load balancing, self-healing, and rolling updates.
 
