@@ -52,7 +52,7 @@ By combining the technologies, methodologies and practices below, you can succes
 
 - Kubernetes: Containerization using Docker and orchestration with Kubernetes enabled easy management and scaling of microservices. Kubernetes provided features like load balancing, self-healing, and rolling updates.
 
-- Monitoring and Observability: I implemented monitoring and observability solutions using Prometheus and Grafana. This allowed for real-time monitoring of application health, resource utilization, and the ability to set up alerts for proactive issue resolution.
+- Monitoring and Observability: Monitoring and observability solutions are implemented using Prometheus and Grafana. This allowed for real-time monitoring of application health, resource utilization, and the ability to set up alerts for proactive issue resolution.
 
 
 ## Principles of Software Design Architecture
