@@ -21,7 +21,7 @@ There are many recognized architectural patterns and styles, among them:
 
 4. Event Driven  / Implicit invocation 
 
-5. Monolithic application : A monolithic application describes a single-tiered software application in which the user interface and data access code are combined into a single program from a single platform. A monolithic application is self-contained, and independent from other computing applications.
+5. Monolithic application : A monolithic application describes a single-tiered software application in which the user interface and data access code are combined into a single program from a single platform.
 
 6. Micro-kernael (COTS/Plugin)
 
