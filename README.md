@@ -74,7 +74,7 @@ v. Code (Implementation)
 
 ```
 
-## Design decision
+## Software Design Decision
 
 ![image](https://github.com/kukuu/integration/assets/10147828/24149165-3a03-4194-afd9-292f20fc3e1a)
 
