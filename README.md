@@ -487,4 +487,7 @@ They work in tandem with the 4 pillars of OOP: Encapsulation, Abstraction, Polym
 - https://github.com/kukuu/system-design-architecture/blob/master/README.md
 - https://github.com/kukuu/integration/blob/main/jwt.md
 - https://github.com/kukuu/AGILITY/raw/master/white-paper/JWT-architecture.png
+- https://github.com/kukuu/Migration-of-Monolith-CMS-to-a-Headless-based-approach
+- https://github.com/kukuu/high-volume-aws-cloud-mailingl-service-system
+- 
 
