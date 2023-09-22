@@ -14,7 +14,7 @@ There are many recognized architectural patterns and styles, among them:
 
 ```
 
-1. Client-server : 2-tier, 3-tier, n-tier, Cloud computing exhibits this style
+1. Client-server : 2-tier, 3-tier, n-tier, Cloud computing exhibits this style: Leveraging cloud technology services, particularly AWS, Azure, or Google Cloud, architecting the platform for scalability and reliability. Cloud-native solutions will allow for easy scaling and disaster recovery planning.
 
 2. Layered (or multilayered architecture eg. MVC)
 
@@ -44,19 +44,18 @@ __Methodologies & _Practices_:
   
 ![image](https://github.com/kukuu/scalable-platforms-system-architecture/assets/10147828/ca5a8d17-1210-47ea-90f8-db5e310e9ea5)
 
-- Cloud Technology: Leveraging cloud services, particularly AWS, Azure, or Google Cloud, architecting the platform for scalability and reliability. Cloud-native solutions will allow for easy scaling and disaster recovery planning.
 
 - Node.js and TypeScript: Node.js was chosen as the backend runtime due to its efficiency and non-blocking I/O. TypeScript was employed to bring strong typing and improved maintainability to the codebase.
 
-- Microservices and Event-Driven APIs: Divide the platform into microservices (where necessary), each responsible for a specific domain or functionality. Event-driven architecture using message queues like RabbitMQ or Kafka facilitated asynchronous communication between these microservices.
+-  Divide the platform into microservices (where necessary), each responsible for a specific domain or functionality. Event-driven architecture using message queues like RabbitMQ or Kafka facilitated asynchronous communication between these microservices.
 
-- Integration and DevOps: Common integration tasks were streamlined by implementing CI/CD pipelines. Tools like Jenkins or GitLab CI were used to automate testing and deployments. Infrastructure as Code (IaC) with tools like Terraform or AWS CloudFormation was employed for infrastructure provisioning.
+- Integration and DevOps: Common integration tasks were streamlined by implementing CI/CD pipelines. Tools like Jenkins or GitLab CI can be used to automate testing and deployments. Infrastructure as Code (IaC) with tools like Terraform or AWS CloudFormation was employed for infrastructure provisioning.
 
            https://github.com/kukuu/integration
 
 - Kubernetes: Containerization using Docker and orchestration with Kubernetes enabled easy management and scaling of microservices. Kubernetes provided features like load balancing, self-healing, and rolling updates.
 
-- Monitoring and Observability: Monitoring and observability solutions are implemented using Prometheus and Grafana. This allowed for real-time monitoring of application health, resource utilization, and the ability to set up alerts for proactive issue resolution.
+- Monitoring and Observability: Monitoring and observability solutions are implemented using Prometheus, Grafana and Pager. This allowed for real-time monitoring of application health, resource utilization, and the ability to set up alerts for proactive issue resolution.
 
 
 ## Principles of Software Design Architecture
