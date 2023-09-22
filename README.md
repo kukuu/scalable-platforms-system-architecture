@@ -246,7 +246,10 @@ iv.   Development teams that are spread out, often across the globe
 
 #### SPRING BOOT JAVA Microservice
 
+
 ![image](https://github.com/kukuu/integration/assets/10147828/e48fa1d1-8fe2-4c30-8e8d-43274d263898)
+
+SQS sits in the notify chain.
 
 ### Space-based architecture (Cloud)
 
