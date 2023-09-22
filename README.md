@@ -8,8 +8,9 @@ The architecture is made so the code structure can satisfy business goals and ev
 
 You can use multiple patterns in a single system to optimize each section of code with the best architecture.
 
-There are many recognized architectural patterns and styles, among them:
+### Architectural Patterns 
 
+There are many recognized architectural patterns and styles, among them:
 
 ```
 
@@ -33,7 +34,10 @@ There are many recognized architectural patterns and styles, among them:
 9. Data-centric
 
 ```
+
 By combining the technologies, methodologies and practices below, you can successfully build a digital platform that will be highly scalable, reliable, maintainable and cost effective. The platform could efficiently handle growing user loads, recover from failures, and provide actionable insights through comprehensive monitoring and observability. This approach will ensure the platform's resilience and responsiveness, meets the demands of a dynamic digital landscape.
+
+__Methodologies & _Practices_:
 
 - System Design Architecture: Start by carefully designing the architecture of the digital platform. follow established software engineering standard methodologies such as the SOLID principles, Domain-Driven Design (DDD) to ensure a maintainable and scalable system and also Security and Project Management methodolgies and guidelines like OWASP, TOGAF, Agile etc.
 
