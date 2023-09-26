@@ -13,7 +13,7 @@ You can use multiple patterns in a single system to optimize each section of cod
 There are many recognized architectural patterns and styles, among them:
 
 
-1. Client-server : 2-tier, 3-tier, n-tier, Cloud computing exhibits this style: Leveraging cloud technology services, particularly AWS, Azure, or Google Cloud, architecting the platform for scalability and reliability. Cloud-native solutions will allow for easy scaling and disaster recovery planning.
+1. Client-server : 2-tier, 3-tier, n-tier, Cloud Computing exhibits this style: Leveraging cloud technology services, particularly AWS, Azure, or Google Cloud, architecting the platform for scalability and reliability. Cloud-native solutions will allow for easy scaling and disaster recovery planning.
 
 2. Layered (or multilayered architecture eg. MVC)
 
